@@ -1269,30 +1269,34 @@ select {
   /* padding makes room for the offset shadow beneath */
   padding-bottom: 10px;
   padding-right: 8px;
+  perspective: 1000px;
 }
 .bcard-scene:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 16px; }
 /* Perspective wrapper — sits inside scene */
 .bcard-persp {
   width: 100%;
-  perspective: 1000px;
 }
 .bcard-inner {
   position: relative;
   width: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.55s cubic-bezier(.4,0,.2,1);
 }
-.bcard-scene.flipped .bcard-inner { transform: rotateY(180deg); }
-/* Each face contains: shadow ghost + white card */
+/* Each face animates individually — no preserve-3d needed */
 .bcard-face {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: relative;
+  transition: transform 0.55s cubic-bezier(.4,0,.2,1);
 }
 .bcard-face.back {
   position: absolute;
   inset: 0;
   transform: rotateY(180deg);
+}
+.bcard-scene.flipped .bcard-face.front {
+  transform: rotateY(-180deg);
+}
+.bcard-scene.flipped .bcard-face.back {
+  transform: rotateY(0deg);
 }
 /* Colored ghost card — sits behind via absolute positioning */
 .bcard-ghost {
