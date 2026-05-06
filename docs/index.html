@@ -2164,7 +2164,7 @@ select {
   </div>
   <div class="lh-stats-grid">
     <div class="lh-stat">
-      <div class="lh-stat-number">1.446</div>
+      <div class="lh-stat-number">1.026</div>
       <div class="lh-stat-label">Diputados únicos</div>
     </div>
     <div class="lh-stat">
@@ -2258,7 +2258,7 @@ select {
         <div class="lh-acc-body">
           <p>La fuente primaria son los <strong>Diarios de Sesiones del Congreso de los Diputados</strong> de las tres legislaturas de la Segunda República (1931–1933, 1933–1936 y 1936–1939). Estos volúmenes recogen las actas íntegras de las sesiones plenarias e incluyen el texto completo de todas las medidas legislativas presentadas: proposiciones de ley, enmiendas, ruegos, interpelaciones y preguntas firmadas colectivamente.</p>
           <p>Se considera <strong>coautoría</strong> cualquier medida legislativa que aparece suscrita por dos o más diputados. Cada firma se extrae como un registro individual, que incluye el identificador único de la medida, la fecha, el tipo de documento, el texto completo y el nombre del firmante tal como aparece en el original.</p>
-          <p>Los nombres de los firmantes se vinculan a identificadores canónicos de diputado (<code>id_dip</code>) mediante un proceso de desambiguación: normalización tipográfica, coincidencia exacta y aproximada con el censo de diputados, y validación manual de casos dudosos. El dataset resultante, <code>coautorias_final.csv</code>, contiene <strong>94.621 registros</strong> de firmas correspondientes a <strong>1.446 diputados únicos</strong>.</p>
+          <p>Los nombres de los firmantes se vinculan a identificadores canónicos de diputado (<code>id_dip</code>) mediante un proceso de desambiguación: normalización tipográfica, coincidencia exacta y aproximada con el censo de diputados, y validación manual de casos dudosos. El dataset resultante, <code>coautorias_final.csv</code>, contiene <strong>94.621 registros</strong> de firmas correspondientes a <strong>1.026 diputados únicos</strong>.</p>
           <p>Los datos estructurados sobre debates, sesiones y perfiles de los diputados proceden de la base de datos <strong>Luz y Taquígrafos</strong>, que registra de forma sistemática las intervenciones y actividad parlamentaria de las tres legislaturas republicanas:</p>
           <div class="lh-metodo-ref" style="margin: 0 0 16px;">
             <strong>Rodrigues-Silveira, R., García-Díez, F., Llamazares, I., Martínez-Barahona, E. &amp; Barreto Martín, E.</strong> (2026). <em>Luz y Taquígrafos: Parliamentary Debates in the Second Spanish Republic, 1931–1945</em>. Harvard Dataverse. <a href="https://doi.org/10.7910/DVN/THQCMI" target="_blank" rel="noopener" style="color:var(--accent)">https://doi.org/10.7910/DVN/THQCMI</a>
@@ -2266,7 +2266,7 @@ select {
           <div class="lh-metodo-tags">
             <span class="lh-metodo-tag">Diarios de Sesiones 1931–1939</span>
             <span class="lh-metodo-tag">94.621 co-autorías</span>
-            <span class="lh-metodo-tag">1.446 diputados</span>
+            <span class="lh-metodo-tag">1.026 diputados</span>
             <span class="lh-metodo-tag">3 legislaturas</span>
           </div>
         </div>
@@ -2287,7 +2287,7 @@ select {
           <p>Una medida firmada por <em>k</em> diputados genera C(k,2) = k(k−1)/2 pares, todos ellos con peso inicial 1. Si el mismo par comparte más de una medida, los pesos se acumulan. La deduplicación por <code>id_medida</code> garantiza que cada medida contribuye como máximo una unidad al peso de cada arista. La red se construye de forma independiente para cada legislatura y para el período total.</p>
           <table class="lh-metodo-table">
             <tr><th>Indicador</th><th>Valor</th></tr>
-            <tr><td>Nodos (diputados únicos)</td><td>1.446</td></tr>
+            <tr><td>Nodos (diputados únicos)</td><td>1.026</td></tr>
             <tr><td>Aristas (pares co-autores)</td><td>63.508</td></tr>
             <tr><td>Densidad de la red global</td><td>≈ 0,061</td></tr>
             <tr><td>Tipo de grafo</td><td>No dirigido, ponderado</td></tr>
